@@ -1,9 +1,11 @@
 #!/bin/bash
 read -s -p "Enter Root Password: "  pswd
 echo -e "$pswd\n$pswd" | sudo passwd
+unset pswd
 sudo -s
 read -s -p "Enter mike Password: "  pswd
 echo -e "$pswd\n$pswd" | passwd mike
+unset pswd
 exit
 # passwd
 sudo apt update && sudo apt upgrade -y
