@@ -20,4 +20,7 @@ sudo systemctl restart sshd
 #wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/makeswap.sh
 #chmod +x makeswap.sh
 #./makeswap.sh
+echo export GOPATH=/home/mike/gocode | sudo tee -a ./.profile
+echo export PATH=$PATH:/home/mike/gocode/bin | sudo tee -a ./.profile
 echo 'Please logoff and login again with SSH!' 
+sudo reboot
