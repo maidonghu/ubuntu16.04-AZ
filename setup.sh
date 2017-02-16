@@ -1,6 +1,10 @@
 #!/bin/bash
 read -s -p "Enter Root Password: "  pswd
 echo -e "$pswd\n$pswd" | sudo passwd
+sudo -s
+read -s -p "Enter mike Password: "  pswd
+echo -e "$pswd\n$pswd" | passwd mike
+exit
 # passwd
 sudo apt update && sudo apt upgrade -y
 sudo timedatectl set-timezone America/Vancouver
