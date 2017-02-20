@@ -12,6 +12,7 @@ cd ~
 wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-AZ/master/aria2.conf
 sudo mv aria2.conf /usr/local/etc/aria2.conf
 sudo aria2c --conf-path=/usr/local/etc/aria2.conf
+sudo ufw allow 6800/tcp
 
 #git clone https://github.com/aria2/aria2.git
 #apt install libgnutls-dev nettle-dev libgmp-dev libssh2-1-dev libc-ares-dev libxml2-dev zlib1g-dev libsqlite3-dev pkg-config
@@ -29,7 +30,7 @@ sudo aria2c --conf-path=/usr/local/etc/aria2.conf
 sudo apt install megatools -y
 
 sudo apt install golang-go -y
-sudo go get github.com/prasmussen/gdrive
+go get github.com/prasmussen/gdrive
 wget https://raw.githubusercontent.com/maidonghu/myconf/master/token_v2.json
 sudo mkdir .gdrive
 sudo mv token_v2.json ./.gdrive/token_v2.json
