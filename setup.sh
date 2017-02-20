@@ -22,7 +22,7 @@ echo -e "y\r" | sudo ufw enable
 sudo ufw logging on
 sudo ufw logging medium
 
-wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/makeswap.sh
+wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-AZ/master/makeswap.sh
 chmod +x makeswap.sh
 ./makeswap.sh
 
