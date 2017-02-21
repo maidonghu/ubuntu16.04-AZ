@@ -15,12 +15,7 @@ sudo timedatectl set-timezone America/Vancouver
 sudo apt install ntp -y
 date
 sudo sed -i 's/Port 22/Port 50009/' /etc/ssh/sshd_config
-sudo ufw allow 50009/tcp
 sudo systemctl restart sshd
-
-echo -e "y\r" | sudo ufw enable
-sudo ufw logging on
-sudo ufw logging medium
 
 wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-AZ/master/makeswap.sh
 chmod +x makeswap.sh
