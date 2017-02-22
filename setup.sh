@@ -4,7 +4,7 @@ echo -e "$pswd\n$pswd" | sudo passwd
 # passwd
 
 read -s -p "Enter mike's new Password: "  pswd
-echo -e "$pswd\n$pswd" | passwd mike
+echo -e "$pswd\n$pswd" | sudo passwd mike
 unset pswd
 
 echo export GOPATH=$HOME/gocode | sudo tee -a ./.profile
