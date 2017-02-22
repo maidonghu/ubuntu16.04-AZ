@@ -2,9 +2,9 @@
 read -s -p "Enter Root Password: "  pswd
 echo -e "$pswd\n$pswd" | sudo passwd
 # passwd
-adduser --disabled-password --gecos "" mike
+
 read -s -p "Enter mike's new Password: "  pswd
-echo -e "$pswd\n$pswd" | sudo passwd mike
+echo -e "$pswd\n$pswd" | passwd mike
 unset pswd
 
 echo export GOPATH=$HOME/gocode | sudo tee -a ./.profile
