@@ -7,9 +7,6 @@ read -s -p "Enter mike's new Password: "  pswd
 echo -e "$pswd\n$pswd" | sudo passwd mike
 unset pswd
 
-echo export GOPATH=$HOME/gocode | sudo tee -a ./.profile
-echo PATH=$PATH:$HOME/gocode/bin | sudo tee -a ./.profile
-
 sudo apt update && sudo apt upgrade -y
 sudo timedatectl set-timezone America/Vancouver
 sudo apt install ntp -y
