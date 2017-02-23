@@ -28,8 +28,8 @@ sudo aria2c --conf-path=/usr/local/etc/aria2.conf
 
 sudo apt install megatools -y
 
-sudo apt install golang-go -y
-go get github.com/prasmussen/gdrive
+sudo wget https://raw.githubusercontent.com/maidonghu/myconf/master/gdrive -O /usr/local/bin/gdrive
+sudo chmod a+rx /usr/local/bin/gdrive
 echo "Please provide a token file"
 sleep 30
 sudo mkdir .gdrive
