@@ -1,4 +1,9 @@
 #!/bin/bash
+sudo touch /etc/apt/sources.list.d/nginx.list
+echo "deb http://nginx.org/packages/ubuntu/ xenial nginx" | sudo tee -a /etc/apt/sources.list.d/nginx.list
+echo "deb-src http://nginx.org/packages/ubuntu/ xenial nginx" | sudo tee -a /etc/apt/sources.list.d/nginx.list
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62
 sudo apt-get update
 sudo apt-get install nginx -y
 #sudo ufw allow 'Nginx HTTP'
