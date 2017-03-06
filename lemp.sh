@@ -20,4 +20,4 @@ sudo apt-get install -y php-fpm php-mysql
 sudo sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/7.0/fpm/php.ini
 sudo systemctl restart php7.0-fpm
 
-sudo wget -O /etc/nginx/sites-available/default https://raw.githubusercontent.com/maidonghu/ubuntu16.04-AZ/master/nginx.conf
+sudo wget -O /etc/nginx/conf.d/default.conf https://raw.githubusercontent.com/maidonghu/ubuntu16.04-AZ/master/nginx.conf
