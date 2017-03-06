@@ -1,11 +1,10 @@
 #!/bin/bash
-sudo touch /etc/apt/sources.list.d/nginx.list
-echo "deb http://nginx.org/packages/ubuntu/ xenial nginx" | sudo tee -a /etc/apt/sources.list.d/nginx.list
-echo "deb-src http://nginx.org/packages/ubuntu/ xenial nginx" | sudo tee -a /etc/apt/sources.list.d/nginx.list
 
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62
+nginx=stable # use nginx=development for latest development version
+sudo add-apt-repository ppa:nginx/$nginx
 sudo apt-get update
 sudo apt-get install nginx -y
+
 #sudo ufw allow 'Nginx HTTP'
 
 #read -s -p "Enter MySQL Root Password: "  pswd
